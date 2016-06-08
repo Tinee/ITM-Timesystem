@@ -1,0 +1,17 @@
+{
+  "name": "nemoclient",
+  "version": "1.0.0",
+  "description": "Visma time",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marcus Tine Carlsson",
+  "license": "ISC",
+  "dependencies": {
+    "eslint": "^2.11.1",
+    "eslint-config-defaults": "^9.0.0",
+    "gulp": "^3.9.1",
+    "gulp-webserver": "^0.9.1"
+  }
+}

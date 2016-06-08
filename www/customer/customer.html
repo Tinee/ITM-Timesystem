@@ -1,0 +1,50 @@
+<md-content>
+
+  <div layout="row" layout-sm="column">
+    <md-card style="width:500px">
+      <md-input-container class="md-icon-float md-block">
+        <!-- Use floating label instead of placeholder -->
+        <label>Name</label>
+        <md-icon md-svg-src="im  g/icons/ic_person_24px.svg" class="name"></md-icon>
+        <input ng-model="user.name" type="text">
+      </md-input-container>
+      <md-input-container md-no-float class="md-block">
+        <md-icon md-svg-src="img/icons/ic_phone_24px.svg"></md-icon>
+        <input ng-model="user.phone" type="text" placeholder="Phone Number">
+      </md-input-container>
+      <md-input-container class="md-block">
+        <!-- Use floating placeholder instead of label -->
+        <md-icon md-svg-src="img/icons/ic_email_24px.svg" class="email"></md-icon>
+        <input ng-model="user.email" type="email" placeholder="Email (required)" ng-required="true">
+      </md-input-container>
+      <md-input-container md-no-float class="md-block">
+        <input ng-model="user.address" type="text" placeholder="Address">
+        <md-icon md-svg-src="img/icons/ic_place_24px.svg" style="display:inline-block;"></md-icon>
+      </md-input-container>
+      <md-input-container class="md-icon-float md-icon-right md-block">
+        <label>Donation Amount</label>
+        <md-icon md-svg-src="img/icons/ic_card_giftcard_24px.svg"></md-icon>
+        <input ng-model="user.donation" type="number" step="0.01">
+        <md-icon md-svg-src="img/icons/ic_euro_24px.svg"></md-icon>
+      </md-input-container>
+      <md-button></md-button>
+    </md-card>
+    <calendar-md flex layout layout-fill calendar-direction="direction" on-prev-month="prevMonth" on-next-month="nextMonth" on-day-click="dayClick"
+      title-format="'MMMM y'" ng-model='selectedDate' week-starts-on="firstDayOfWeek" data-start-month="8" data-start-year="2014"
+      tooltips="tooltips" day-format="dayFormat" day-label-format="'EEE'" day-label-tooltip-format="'EEEE'" day-tooltip-format="'fullDate'"
+      day-content="setDayContent" disable-future-selection="false"></calendar-md>
+    <md-card>
+      <md-list>
+        <md-list-item>asdaa</md-list-item>
+        <md-list-item>asdaa</md-list-item>
+        <md-list-item>asdaa</md-list-item>
+        <md-list-item>asdaa</md-list-item>
+        <md-list-item>asdaa</md-list-item>
+        <md-list-item>asdaa</md-list-item>
+        <md-list-item>asdaa</md-list-item>
+      </md-list>
+    </md-card>
+  </div>
+
+
+</md-content>

@@ -1,0 +1,25 @@
+{
+  "name": "nemoclient",
+  "description": "Visma time",
+  "main": "server.js",
+  "authors": [
+    "Marcus Tine Carlsson"
+  ],
+  "license": "ISC",
+  "homepage": "Marcuscarlsson.nu",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.6",
+    "angular-material": "^1.0.9",
+    "angular-ui-router": "^0.3.0",
+    "angular-resource": "^1.5.6",
+    "material-design-icons": "^2.2.3",
+    "material-calendar": "^0.2.14"
+  }
+}

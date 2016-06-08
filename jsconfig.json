@@ -1,0 +1,16 @@
+{
+   "compilerOptions": {
+      "target": "ES6",
+      "module": "commonjs"
+   },
+   "files": [
+      "typings/tsd.d.ts",
+      "www/core/config.js",
+      "www/core/dataService.js",
+      "www/layout/layout.js",
+      "www/app.js"
+        ],
+         "exclude": [
+        "node_modules"
+    ]
+}
