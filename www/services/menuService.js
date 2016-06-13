@@ -23,7 +23,7 @@
 
         var customerMenus = [
             {
-                link: '',
+                link: '/Tidsstämpling',
                 title: 'Kundrad',
                 icon: 'grade'
             },

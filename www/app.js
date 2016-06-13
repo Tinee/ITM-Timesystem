@@ -4,7 +4,7 @@
     angular.module('app', [
         'app.core',
         'app.layout',
-        'app.customer',
+        'app.timestamping',
         'app.services',
     ])
         .config([
@@ -23,10 +23,10 @@
                 controller: 'LayoutController as vm',
                 templateUrl: '/www/layout/layout.html',
             })
-            .state('layout.customer', {
-                url: 'Customer',
-                templateUrl: '/www/customer/customer.html',
-                controller: 'CustomerController as vm'
+            .state('layout.timestamping', {
+                url: 'Tidsstämpling',
+                templateUrl: '/www/timestamping/timestamping.html',
+                controller: 'TimestampingController as vm'
 
             });
         $locationProvider.html5Mode(true);

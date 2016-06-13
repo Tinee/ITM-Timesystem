@@ -2,11 +2,11 @@
     'use strict';
 
     angular
-        .module('app.customer')
-        .controller('CustomerController', CustomerController);
+        .module('app.timestamping')
+        .controller('TimestampingController', TimestampingController);
 
-    CustomerController.$inject = ['$scope', '$filter', '$http', '$q'];
-    function CustomerController($scope, $filter, $http, $q) {
+    TimestampingController.$inject = ['$scope', '$filter', '$http', '$q'];
+    function TimestampingController($scope, $filter, $http, $q) {
         $scope.selectedDate = null;
         $scope.firstDayOfWeek = 0;
         $scope.setDirection = function (direction) {
