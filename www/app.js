@@ -6,6 +6,7 @@
         'app.layout',
         'app.timestamping',
         'app.services',
+        'app.factories'
     ])
         .config([
             '$stateProvider',
