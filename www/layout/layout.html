@@ -2,12 +2,12 @@
     <md-toolbar class="md-hue-2">
         <span flex></span>
         <div layout="row" layout-align="start center">
-            <img class="logo" src="\www\assets\files\itmlogo.png" alt="asd">
+            <img class="logo" src="\www\assets\files\itmlogo.png" alt="">
         </div>
     </md-toolbar>
     <md-list>
         <md-subheader class="md-no-sticky">Kund</md-subheader>
-        <md-list-item ng-href="{{item.link}}" class="md-2-line" ng-repeat="item in vm.menuItems.customerMenus" role="link" md-ink-ripple>
+        <md-list-item ng-click="vm.changeView(item.link)" class="md-2-line" ng-repeat="item in vm.menuItems.customerMenus" role="link" md-ink-ripple>
             <md-icon aria-label="{{item.title}}"><i class="material-icons">{{item.icon}}</i></md-icon>
             <div class="md-list-item-text">
                 <span class="md-body-2">{{item.title}}</span>
