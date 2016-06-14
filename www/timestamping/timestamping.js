@@ -5,8 +5,8 @@
         .module('app.timestamping')
         .controller('TimestampingController', TimestampingController);
 
-    TimestampingController.$inject = ['$scope', '$filter'];
-    function TimestampingController($scope, $filter) {
+    TimestampingController.$inject = ['$scope', '$filter','$mdpTimePicker'];
+    function TimestampingController($scope, $filter,$mdpTimePicker) {
         $scope.selectedDate = null;
         $scope.firstDayOfWeek = 0;
         $scope.setDirection = function (direction) {

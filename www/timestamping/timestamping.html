@@ -1,44 +1,27 @@
 <md-content>
   <div layout="row" layout-sm="column">
     <md-card flex=30>
-      <md-autocomplete flex required
-            md-input-name="autocompleteField"
-            md-input-minlength="2"
-            md-input-maxlength="18"
-            md-no-cache="ctrl.noCache"
-            md-selected-item="ctrl.selectedItem"
-            md-search-text="ctrl.searchText"
-            md-items="item in ctrl.querySearch(ctrl.searchText)"
-            md-item-text="item.display"
-            md-floating-label="Favorite state">
-          <md-item-template>
-            <span md-highlight-text="ctrl.searchText">{{item.display}}</span>
-       </md-card>
-
+      <md-card-content>
+        <md-autocomplete flex required md-input-name="autocompleteField" md-input-minlength="2" md-input-maxlength="18" md-no-cache="ctrl.noCache" md-selected-item="ctrl.selectedItem" md-search-text="ctrl.searchText" md-items="item in ctrl.querySearch(ctrl.searchText)"
+          md-item-text="item.display" md-floating-label="Favorite state">
+      </md-card-content>
+    </md-card>
     <md-card flex=30>
-      <md-input-container md-no-float class="md-block">
-        <md-icon md-svg-src="img/icons/ic_phone_24px.svg"></md-icon>
-        <input ng-model="user.phone" type="text" placeholder="Phone Number">
-      </md-input-container>
-      <md-input-container class="md-block">
-        <md-icon md-svg-src="img/icons/ic_email_24px.svg" class="email"></md-icon>
-        <input ng-model="user.email" type="email" placeholder="Email (required)" ng-required="true">
-      </md-input-container>
-     
-      <md-input-container md-no-float class="md-block">
-        <input ng-model="user.address" type="text" placeholder="Address">
-        <md-icon md-svg-src="img/icons/ic_place_24px.svg" style="display:inline-block;"></md-icon>
-      </md-input-container>
-      <md-input-container class="md-icon-float md-icon-right md-block">
-        <label>Donation Amount</label>
-        <md-icon md-svg-src="img/icons/ic_card_giftcard_24px.svg"></md-icon>
-        <input ng-model="user.donation" type="number" step="0.01">
-        <md-icon md-svg-src="img/icons/ic_euro_24px.svg"></md-icon>
-      </md-input-container>
-      <md-button></md-button>
+      <md-card-content>
+        <md-input-container md-no-float class="md-block">
+          <input ng-model="user.asd" type="text" placeholder="Beskrvning">
+        </md-input-container>
+        <md-input-container class="md-block">
+          <input ng-model="user.email" type="email" placeholder="Email (required)" ng-required="true">
+        </md-input-container>
+        <md-input-container md-no-float class="md-block">
+          <input ng-model="user.address" type="text" placeholder="Address">
+        </md-input-container>
+        <mdp-time-picker placeholder="Från" ng-model="currentDate"></mdp-time-picker>
+        <mdp-time-picker placeholder="Till" ng-model="currentDate"></mdp-time-picker>
+      </md-card-content>
     </md-card>
   </div>
-
-    <calendar-md flex=50 layout layout-fill calendar-direction="direction" on-prev-month="prevMonth" on-next-month="nextMonth" on-day-click="dayClick" title-format="'MMMM y'" ng-model='selectedDate' week-starts-on="firstDayOfWeek" data-start-month="8" data-start-year="2014"
-      tooltips="tooltips" day-format="dayFormat" day-label-format="'EEE'" day-label-tooltip-format="'EEEE'" day-tooltip-format="'fullDate'" day-content="setDayContent" disable-future-selection="false"></calendar-md>
+  <calendar-md flex=50 layout layout-fill calendar-direction="direction" on-prev-month="prevMonth" on-next-month="nextMonth" on-day-click="dayClick" title-format="'MMMM y'" ng-model='selectedDate' week-starts-on="firstDayOfWeek" data-start-month="8" data-start-year="2014"
+    tooltips="tooltips" day-format="dayFormat" day-label-format="'EEE'" day-label-tooltip-format="'EEEE'" day-tooltip-format="'fullDate'" day-content="setDayContent" disable-future-selection="false"></calendar-md>
 </md-content>
