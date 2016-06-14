@@ -1,13 +1,13 @@
 [ng\:cloak],
-        [ng-cloak],
-        [data-ng-cloak],
-        [x-ng-cloak],
-        .ng-cloak,
-        .x-ng-cloak {
-            display: none !important;
-        }
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
+  display: none !important;
+}
 
-    [ng-click]:hover {
+[ng-click]:hover {
   cursor: pointer;
 }
 
@@ -24,10 +24,12 @@ md-sidenav > md-toolbar {
   height: 150px;
   max-height: 150px;
 }
+
 md-sidenav md-list-item.md-2-line .md-list-item-text {
-  padding-top: 14px;
+  padding-top: 30px;
   padding-bottom: 30px;
 }
+
 md-sidenav md-divider {
   margin-top: 4px;
   margin-bottom: 4px;
@@ -37,12 +39,13 @@ md-sidenav md-icon {
   fill: #737373;
   position: relative;
 }
+
 md-sidenav .md-avatar {
   height: 64px;
   width: 64px;
 }
 
-div.md-list-item-text{
+div.md-list-item-text {
   padding-bottom: 30px;
 }
 
@@ -54,6 +57,7 @@ div.md-list-item-text{
   transition: 0.75s ease-out opacity;
   opacity: 1;
 }
+
 .animate-show.ng-hide {
   height: 0;
   min-height: 0;
@@ -61,14 +65,15 @@ div.md-list-item-text{
   overflow: hidden;
 }
 
-.logo{
+.logo {
   height: 75px;
- text-align: center;
-     text-align: center;
-    width: 75px;
-    margin: 0 auto;
-    margin-bottom: 8%
+  text-align: center;
+  text-align: center;
+  width: 75px;
+  margin: 0 auto;
+  margin-bottom: 8%
 }
+
 
 /*md-toolbar.md-hue-2{
   background-color: red !important;
@@ -76,5 +81,22 @@ div.md-list-item-text{
 
 .itmTitle {
   padding-top: 100px;
+}
 
+md-list-item.md-2-line>.md-no-style {
+ min-height: 10px; 
+  
+}
+
+md-list-item .md-list-item-inner {
+  height: 10px;
+}
+
+md-list-item.md-2-line .md-list-item-text,
+md-list-item.md-2-line>.md-no-style .md-list-item-text {
+  margin: 0px;
+}
+
+md-list-item.md-2-line {
+  min-height: 10px;
 }
