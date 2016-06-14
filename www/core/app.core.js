@@ -5,6 +5,7 @@
         'ngMaterial',
         'ui.router',
         'ngResource',
-        'materialCalendar'
+        'materialCalendar',
+       'mdPickers'
     ]);
 })();
