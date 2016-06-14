@@ -11,13 +11,23 @@
         var internMenus = [
             {
                 link: '',
-                title: 'Dashboard',
-                icon: 'dashboard'
+                title: 'Vabbning',
+                icon: 'child_care'
+            },
+            {
+                link: '',
+                title: 'Semester',
+                icon: 'pool'
+            },
+            {
+                link: '',
+                title: 'Möte',
+                icon: 'supervisor_account'
             },
             {
                 link: '',
                 title: 'Sjukdom',
-                icon: 'report_problem'
+                icon: 'sentiment_very_dissatisfied'
             },
         ];
 
@@ -26,6 +36,11 @@
                 link: '/Tidsstämpling',
                 title: 'Kundrad',
                 icon: 'grade'
+            },
+            {
+                link: '/Historik',
+                title: 'Historik',
+                icon: 'public'
             },
         ]
 
