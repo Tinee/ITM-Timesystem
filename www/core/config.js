@@ -1,15 +1,14 @@
-(function() {
-    'use strict';
+(function () {
+  'use strict';
 
-    angular.module('app.core').config(ThemingProvider);
+  angular.module('app.core').config(ThemingProvider);
 
-    ThemingProvider.$inject = ['$mdThemingProvider','$mdIconProvider'];
-    function ThemingProvider($mdThemingProvider,$mdIconProvider) {
+  ThemingProvider.$inject = ['$mdThemingProvider'];
+  function ThemingProvider($mdThemingProvider) {
 
+    $mdThemingProvider.theme('default')
+      .primaryPalette('blue-grey')
 
- $mdThemingProvider.theme("default")
- .primaryPalette("indigo")
-
-   }
+  }
 
 })();
