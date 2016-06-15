@@ -100,3 +100,7 @@ md-list-item.md-2-line>.md-no-style .md-list-item-text {
 md-list-item.md-2-line {
   min-height: 10px;
 }
+
+.md-button {
+  margin: 10px 40%;
+}
