@@ -28,7 +28,11 @@
                 url: 'Tidsstämpling',
                 templateUrl: '/www/timestamping/timestamping.html',
                 controller: 'TimestampingController as vm'
-
+            })
+            .state('layout.history', {
+                url: 'Historik',
+                templateUrl: '/www/history/history.html',
+                controller: 'HistoryController as vm'
             });
         $locationProvider.html5Mode(true);
     }
