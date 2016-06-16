@@ -8,7 +8,6 @@
     authInterceptorService.$inject = ['$q', '$location'];
     function authInterceptorService($q, $location) {
 
-
         var services = {
             request: request,
             responseError:responseError
@@ -25,13 +24,11 @@
                 config.headers.Authorization = 'Bearer ' + authData.token;
             }
             else {
-                if ($location.path() !== '/tab/login') {
-                    $location.path('/tab/login');
+                if ($location.path() !== '/Inlogg') {
+                    $location.path('/Inlogg');
                     window.location.reload();
                 }
-
             }
-
             return config;
         };
 
