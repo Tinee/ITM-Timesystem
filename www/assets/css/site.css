@@ -10,6 +10,9 @@
 [ng-click]:hover {
   cursor: pointer;
 }
+body {
+  background-color:ghostwhite
+}
 
 [ng-click]:hover {
   cursor: pointer;
@@ -101,6 +104,34 @@ md-list-item.md-2-line {
   min-height: 10px;
 }
 
-.md-button {
+ .md-button {
   margin: 10px 40%;
+}
+
+#loginButton {
+  margin: 10px 80%;
+  margin-left: 80%;
+}
+
+.login-icons {
+  font-size:30px !important;
+}
+
+.layout-fill {
+    min-height: 88%;
+}
+
+md-input-container label{
+  font-family: "Cormorant",serif;
+  font-size: 20px;
+  color: grey
+}
+
+.login-title {
+ font-family: "Cormorant";
+  font-size: 48px;
+}
+
+.md-button.md-primary span{
+    color: White
 }
