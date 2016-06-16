@@ -5,8 +5,8 @@
     .module('app.layout')
     .controller('LayoutController', LayoutController);
 
-  LayoutController.$inject = ['$scope', '$mdSidenav', 'menuService','changeView'];
-  function LayoutController($scope, $mdSidenav, menuService,changeView) {
+  LayoutController.$inject = ['$scope', '$mdSidenav', 'menuService', 'changeView'];
+  function LayoutController($scope, $mdSidenav, menuService, changeView) {
     var vm = this;
 
     vm.toggleSidenav = toogleSidenav
