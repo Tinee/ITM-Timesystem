@@ -6,7 +6,8 @@
         'app.layout',
         'app.timestamping',
         'app.services',
-        'app.factories'
+        'app.factories',
+        'app.login'
     ])
         .config([
             '$stateProvider',
@@ -23,6 +24,11 @@
                 url: '/',
                 controller: 'LayoutController as vm',
                 templateUrl: '/www/layout/layout.html',
+            })
+            .state('layout.login', {
+                url: 'Inlogg',
+                controller: 'LoginController as vm',
+                templateUrl: '/www/login/login.html',
             })
             .state('layout.timestamping', {
                 url: 'Tidsstämpling',
