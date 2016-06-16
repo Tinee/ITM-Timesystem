@@ -1,0 +1,26 @@
+<div style="margin-top:70px" layout="row" layout-padding>
+    <div flex=30></div>
+    <md-card flex>
+        <md-card-content flex>
+            <div layout="row" layout-align="start center">
+                <img class="logo" src="\www\assets\files\itmlogo.png" alt="">
+            </div>
+            <md-content>
+                <form>
+                    <md-input-container class="md-icon-float md-block">
+                        <label>Användarnamn</label>
+                        <md-icon aria-label="mood"><i class="material-icons login-icons">mood</i></md-icon>
+                        <input flex ng-model="user.name" type="text">
+                    </md-input-container>
+                    <md-input-container class="md-icon-float md-block">
+                        <label>Lösenord</label>
+                        <md-icon aria-label="fingerprint"><i style="height: 30px" class="material-icons login-icons">fingerprint</i></md-icon>
+                        <input ng-model="user.name" type="text">
+                    </md-input-container>
+                    <md-button type="submit" id="loginButton" class="md-raised md-primary">Logga in</md-button>
+                </form>
+        </md-card-content>
+        </md-content>
+    </md-card>
+    <div flex=30></div>
+</div>
