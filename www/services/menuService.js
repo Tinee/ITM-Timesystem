@@ -35,7 +35,8 @@
             {
                 link: '/Tidsstämpling',
                 title: 'Kundrad',
-                icon: 'grade'
+                icon: 'grade',
+                color: 'gold'
             },
             {
                 link: '/Historik',
