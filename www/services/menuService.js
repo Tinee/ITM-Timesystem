@@ -49,6 +49,11 @@
                 link: '',
                 title: 'Profil',
                 icon: 'face'
+            },
+             {
+                link: '',
+                title: 'Logga ut',
+                icon: 'vertical_align_bottom'
             }
         ];
 
