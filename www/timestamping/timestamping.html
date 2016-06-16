@@ -1,15 +1,94 @@
 <md-content flex>
-  <div layout="row" layout-sm="column">
+  <div layout="row" layout-sm="column" layout-xs="column">
     <md-card flex>
       <md-card-content flex>
-        <md-input-container class="md-block">
-          <label>Intern beskrivning</label>
-          <textarea ng-model="asdasdasd"></textarea>
-        </md-input-container>
+        <div layout="inline">
+          <md-autocomplete flex required md-input-name="autocompleteField" md-input-minlength="2" md-input-maxlength="18" md-no-cache="ctrl.noCache" md-selected-item="ctrl.selectedItem" md-search-text="ctrl.searchText" md-items="item in ctrl.querySearch(ctrl.searchText)"
+            md-item-text="item.display" md-floating-label="Syssla">
+            <md-item-template>
+              <span md-highlight-text="ctrl.searchText">{{item.display}}</span>
+            </md-item-template>
+            <div ng-messages="searchForm.autocompleteField.$error" ng-if="searchForm.autocompleteField.$touched">
+              <div ng-message="required">You <b>must</b> have a favorite state.</div>
+              <div ng-message="minlength">Your entry is not long enough.</div>
+              <div ng-message="maxlength">Your entry is too long.</div>
+            </div>
+          </md-autocomplete>
+          <div flex=10></div>
+          <md-autocomplete flex required md-input-name="autocompleteField" md-input-minlength="2" md-input-maxlength="18" md-no-cache="ctrl.noCache" md-selected-item="ctrl.selectedItem" md-search-text="ctrl.searchText" md-items="item in ctrl.querySearch(ctrl.searchText)"
+            md-item-text="item.display" md-floating-label="Aktivitet">
+            <md-item-template>
+              <span md-highlight-text="ctrl.searchText">{{item.display}}</span>
+            </md-item-template>
+            <div ng-messages="searchForm.autocompleteField.$error" ng-if="searchForm.autocompleteField.$touched">
+              <div ng-message="required">You <b>must</b> have a favorite state.</div>
+              <div ng-message="minlength">Your entry is not long enough.</div>
+              <div ng-message="maxlength">Your entry is too long.</div>
+            </div>
+          </md-autocomplete>
+        </div>
+        <div layout="inline">
+          <md-autocomplete flex required md-input-name="autocompleteField" md-input-minlength="2" md-input-maxlength="18" md-no-cache="ctrl.noCache" md-selected-item="ctrl.selectedItem" md-search-text="ctrl.searchText" md-items="item in ctrl.querySearch(ctrl.searchText)"
+            md-item-text="item.display" md-floating-label="Kund">
+            <md-item-template>
+              <span md-highlight-text="ctrl.searchText">{{item.display}}</span>
+            </md-item-template>
+            <div ng-messages="searchForm.autocompleteField.$error" ng-if="searchForm.autocompleteField.$touched">
+              <div ng-message="required">You <b>must</b> have a favorite state.</div>
+              <div ng-message="minlength">Your entry is not long enough.</div>
+              <div ng-message="maxlength">Your entry is too long.</div>
+            </div>
+          </md-autocomplete>
+          <div flex=10></div>
+          <md-autocomplete flex required md-input-name="autocompleteField" md-input-minlength="2" md-input-maxlength="18" md-no-cache="ctrl.noCache" md-selected-item="ctrl.selectedItem" md-search-text="ctrl.searchText" md-items="item in ctrl.querySearch(ctrl.searchText)"
+            md-item-text="item.display" md-floating-label="Avtal">
+            <md-item-template>
+              <span md-highlight-text="ctrl.searchText">{{item.display}}</span>
+            </md-item-template>
+            <div ng-messages="searchForm.autocompleteField.$error" ng-if="searchForm.autocompleteField.$touched">
+              <div ng-message="required">You <b>must</b> have a favorite state.</div>
+              <div ng-message="minlength">Your entry is not long enough.</div>
+              <div ng-message="maxlength">Your entry is too long.</div>
+            </div>
+          </md-autocomplete>
+        </div>
+        <div layout="inline">
+          <md-autocomplete flex required md-input-name="autocompleteField" md-input-minlength="2" md-input-maxlength="18" md-no-cache="ctrl.noCache" md-selected-item="ctrl.selectedItem" md-search-text="ctrl.searchText" md-items="item in ctrl.querySearch(ctrl.searchText)"
+            md-item-text="item.display" md-floating-label="Taxa">
+            <md-item-template>
+              <span md-highlight-text="ctrl.searchText">{{item.display}}</span>
+            </md-item-template>
+            <div ng-messages="searchForm.autocompleteField.$error" ng-if="searchForm.autocompleteField.$touched">
+              <div ng-message="required">You <b>must</b> have a favorite state.</div>
+              <div ng-message="minlength">Your entry is not long enough.</div>
+              <div ng-message="maxlength">Your entry is too long.</div>
+            </div>
+          </md-autocomplete>
+          <div flex=10></div>
+          <md-autocomplete flex required md-input-name="autocompleteField" md-input-minlength="2" md-input-maxlength="18" md-no-cache="ctrl.noCache" md-selected-item="ctrl.selectedItem" md-search-text="ctrl.searchText" md-items="item in ctrl.querySearch(ctrl.searchText)"
+            md-item-text="item.display" md-floating-label="Tjänst">
+            <md-item-template>
+              <span md-highlight-text="ctrl.searchText">{{item.display}}</span>
+            </md-item-template>
+            <div ng-messages="searchForm.autocompleteField.$error" ng-if="searchForm.autocompleteField.$touched">
+              <div ng-message="required">You <b>must</b> have a favorite state.</div>
+              <div ng-message="minlength">Your entry is not long enough.</div>
+              <div ng-message="maxlength">Your entry is too long.</div>
+            </div>
+          </md-autocomplete>
+        </div>
+        <md-autocomplete flex required md-input-name="autocompleteField" md-input-minlength="2" md-input-maxlength="18" md-no-cache="ctrl.noCache" md-selected-item="ctrl.selectedItem" md-search-text="ctrl.searchText" md-items="item in ctrl.querySearch(ctrl.searchText)"
+          md-item-text="item.display" md-floating-label="Projekt">
+          <md-item-template>
+            <span md-highlight-text="ctrl.searchText">{{item.display}}</span>
+          </md-item-template>
+          <div ng-messages="searchForm.autocompleteField.$error" ng-if="searchForm.autocompleteField.$touched">
+            <div ng-message="required">You <b>must</b> have a favorite state.</div>
+            <div ng-message="minlength">Your entry is not long enough.</div>
+            <div ng-message="maxlength">Your entry is too long.</div>
+          </div>
+        </md-autocomplete>
       </md-card-content>
-      <md-button class="md-fab md-fab-bottom-right" aria-label="Add" ng-click="showAdd($event)">
-        <ng-md-icon icon="add"></ng-md-icon>
-      </md-button>
     </md-card>
     <md-card flex>
       <md-card-content flex>
@@ -29,7 +108,6 @@
           <label>Intern beskrivning</label>
           <textarea ng-model="asdasdasd"></textarea>
         </md-input-container>
-
         <md-input-container>
       </md-card-content>
       <md-button class="md-raised md-primary">Spara</md-button>
@@ -40,5 +118,4 @@
       </md-card-content>
     </md-card>
   </div>
-
 </md-content>
