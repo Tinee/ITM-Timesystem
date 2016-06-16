@@ -6,6 +6,7 @@
         'ui.router',
         'ngResource',
         'materialCalendar',
-       'mdPickers'
+       'mdPickers',
+       'LocalStorageModule'
     ]);
 })();
