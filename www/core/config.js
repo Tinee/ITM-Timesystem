@@ -6,9 +6,11 @@
   ThemingProvider.$inject = ['$mdThemingProvider'];
   function ThemingProvider($mdThemingProvider) {
 
-    $mdThemingProvider.theme('default')
-      .primaryPalette('blue-grey')
-
+$mdThemingProvider.theme('default')
+    .primaryPalette('light-blue')
+    .accentPalette('amber')
+    .warnPalette('red')
+    .backgroundPalette('grey');
   }
 
 })();
