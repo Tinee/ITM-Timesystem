@@ -74,13 +74,8 @@ div.md-list-item-text {
   text-align: center;
   width: 75px;
   margin: 0 auto;
-  margin-bottom: 8%
+  margin-bottom: 1%
 }
-
-
-/*md-toolbar.md-hue-2{
-  background-color: red !important;
-}*/
 
 .itmTitle {
   padding-top: 100px;
@@ -122,14 +117,8 @@ md-list-item.md-2-line {
 }
 
 md-input-container label{
-  font-family: "Cormorant",serif;
-  font-size: 20px;
+  font-size: 14px;
   color: grey
-}
-
-.login-title {
- font-family: "Cormorant";
-  font-size: 48px;
 }
 
 .md-button.md-primary span{
