@@ -14,13 +14,13 @@
 
 
         var services = {
-            favorites: favorites
+            bookmarks: bookmarks
         };
 
         return services;
 
-        function favorites() {
-            return $resource(mongoDbAdress + 'favorite/:id', { id: '@id' });
+        function bookmarks() {
+            return $resource(mongoDbAdress + 'bookmarks/:id', { id: '@id' });
         }
     }
 })();
