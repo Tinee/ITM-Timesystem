@@ -11,7 +11,10 @@
   cursor: pointer;
 }
 body {
-  background-color:ghostwhite
+  background: radial-gradient(
+    hsl(30,80%,80%),
+    hsl(210,50%,70%))
+    no-repeat center;
 }
 
 [ng-click]:hover {
