@@ -5,14 +5,15 @@
         .module('app.auth')
         .factory('authService', AuthService);
 
-    AuthService.$inject = ['$location', '$http', '$q', '$state'];
-    function AuthService($location, $http, $q, $state) {
+    AuthService.$inject = ['$location', '$http', '$q', '$state', 'localstorageFactory'];
+    function AuthService($location, $http, $q, $state, localstorageFactory) {
 
 
-        var serviceBase = 'http://marcuscarlssonapi.azurewebsites.net/';
+        var serviceBase = '';
         var services = {
             login: login,
-            logout: logout
+            logout: logout,
+            checkLoggedInStatus: checkLoggedInStatus
         };
 
         return services;
@@ -27,21 +28,27 @@
 
                 window.localStorage.setItem('token', angular.toJson({ token: response.access_token }));
 
-                $location.path('/tab/companies');
-                window.location.reload();
+                $location.path('/Inlogg');
 
                 deferred.resolve(response);
 
             }).error(function (err, status) {
                 deferred.reject(err);
             });
-
             return deferred.promise;
         }
 
-        function logout(){
+        function checkLoggedInStatus() {
+            if (localstorageFactory.get('user') === null) {
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
 
-            
+        function logout() {
+            localstorageFactory.remove('user');
         }
     }
 })();

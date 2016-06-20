@@ -19,16 +19,7 @@
 
             config.headers = config.headers || {};
 
-            var authData = JSON.parse(window.localStorage.getItem('token'));
-            if (authData) {
-                config.headers.Authorization = 'Bearer ' + authData.token;
-            }
-            else {
-                if ($location.path() !== '/Inlogg') {
-                    $location.path('/Inlogg');
-                    window.location.reload();
-                }
-            }
+       
             return config;
         };
 
