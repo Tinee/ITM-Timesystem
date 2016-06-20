@@ -12,22 +12,22 @@
             {
                 link: '',
                 title: 'Vabbning',
-                icon: 'child_care'
+                icon: 'child_care',
             },
             {
                 link: '',
                 title: 'Semester',
-                icon: 'pool'
+                icon: 'pool',
             },
             {
                 link: '',
                 title: 'Möte',
-                icon: 'supervisor_account'
+                icon: 'supervisor_account',
             },
             {
                 link: '',
                 title: 'Sjukdom',
-                icon: 'sentiment_very_dissatisfied'
+                icon: 'sentiment_very_dissatisfied',
             },
         ];
 
@@ -36,12 +36,12 @@
                 link: '/Tidsstämpling',
                 title: 'Kundrad',
                 icon: 'grade',
-                color: 'gold'
+                color: 'gold',
             },
             {
                 link: '/Historik',
                 title: 'Historik',
-                icon: 'public'
+                icon: 'public',
             },
         ]
 
@@ -49,12 +49,12 @@
             {
                 link: '',
                 title: 'Profil',
-                icon: 'face'
+                icon: 'face',
             },
-             {
+            {
                 link: '',
                 title: 'Logga ut',
-                icon: 'vertical_align_bottom'
+                icon: 'vertical_align_bottom',
             }
         ];
 
