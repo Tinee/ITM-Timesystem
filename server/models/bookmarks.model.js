@@ -1,7 +1,8 @@
 var mongoose = require('mongoose');
 
-var favoriteSchema = mongoose.Schema({
-    employee: { id: Number, name: String },
+var bookmarkSchema = mongoose.Schema({
+    bookmarkName: String,
+    employeeId: Number,
     occupation: { id: String, text: String },
     activity: { id: Number, text: String },
     customer: { id: Number, name: String },
@@ -16,4 +17,4 @@ var favoriteSchema = mongoose.Schema({
         versionKey: false
     });
 
-module.exports = mongoose.model('Favorite', favoriteSchema);
+module.exports = mongoose.model('Bookmark', bookmarkSchema);
