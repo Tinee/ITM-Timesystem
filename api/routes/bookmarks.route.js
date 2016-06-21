@@ -16,11 +16,11 @@ module.exports = function (app) {
     });
 
     app.get('/bookmarks', function (req, res) {
-        Bookmarks.find(function (err, Bookmarkss) {
+        Bookmarks.find(function (err, Bookmarks) {
             if (err) {
                 res.json({ info: 'error finding the bookmark', error: err });
             }
-            res.json([Bookmarkss]);
+            res.json(Bookmarks);
         });
     });
 

@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 
 var bookmarkSchema = mongoose.Schema({
-    bookmarkName: String,
+    bookmarkTitle: String,
     employeeId: Number,
     occupation: { id: String, text: String },
     activity: { id: Number, text: String },
