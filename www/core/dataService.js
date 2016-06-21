@@ -9,8 +9,7 @@
     function dataService($resource) {
 
         var baseAdress = 'http://localhost:50944/';
-
-        var mongoDbAdress = 'http://127.0.0.1:3000/'
+        var mongoDbAdress = 'http://127.0.0.1:3000/';
 
 
         var services = {
