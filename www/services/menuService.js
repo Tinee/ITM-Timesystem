@@ -5,13 +5,13 @@
         .module('app.services')
         .service('menuService', MenuService);
 
-    MenuService.$inject = [];
-    function MenuService() {
+    MenuService.$inject = ['dataService'];
+    function MenuService(dataService) {
 
         var internMenus = [
             {
                 link: '',
-                title: 'Vabbning',
+                title: 'Vård av barn',
                 icon: 'child_care',
             },
             {
@@ -58,6 +58,15 @@
             }
         ];
 
+        getUsersBookmarks();
+
+        function getUsersBookmarks() {
+
+
+          dataService.bookmarks().query(function (response) {
+                var x = response;
+            });
+        }
 
         return {
             internMenus: internMenus,

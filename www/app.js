@@ -10,12 +10,15 @@
         'app.login',
         'app.auth'
     ])
-        .config(Routes)
-        .run(Run);
+        .config(['$stateProvider',
+            '$locationProvider',
+            '$urlRouterProvider',
+            Routes])
+        .run(['$rootScope',
+            '$state',
+            Run]);
 
-    Routes.$inject['$stateProvider', '$locationProvider', '$urlRouterProvider']
     function Routes($stateProvider, $locationProvider, $urlRouterProvider) {
-
 
         $urlRouterProvider.otherwise('/Tidsstämpling');
 
@@ -27,13 +30,12 @@
             }]
         };
 
-
         $stateProvider
             .state('layout', {
                 url: '/',
                 controller: 'LayoutController as vm',
                 templateUrl: '/www/layout/layout.html',
-                abstract:true
+                abstract: true
             })
             .state('layout.login', {
                 url: 'Inlogg',
@@ -57,8 +59,6 @@
         $locationProvider.html5Mode(true);
     }
 
-
-    Run.$inject['$rootScope', '$state']
     function Run($rootScope, $state) {
 
         $rootScope.$on('$stateChangeError', function (event, toState, toParams, fromState, fromParams, error) {
