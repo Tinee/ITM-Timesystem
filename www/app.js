@@ -8,7 +8,8 @@
         'app.services',
         'app.factories',
         'app.login',
-        'app.auth'
+        'app.auth',
+        'app.directives'
     ])
         .config(['$stateProvider',
             '$locationProvider',
