@@ -10,11 +10,9 @@
 [ng-click]:hover {
   cursor: pointer;
 }
+
 body {
-  background: radial-gradient(
-    hsl(30,80%,80%),
-    hsl(210,50%,70%))
-    no-repeat center;
+  background: radial-gradient( hsl(30, 80%, 80%), hsl(210, 50%, 70%)) no-repeat center;
 }
 
 [ng-click]:hover {
@@ -72,10 +70,10 @@ div.md-list-item-text {
 }
 
 .logo {
-  height: 75px;
+  height: 55px;
   text-align: center;
   text-align: center;
-  width: 75px;
+  width: 55px;
   margin: 0 auto;
   margin-bottom: 1%
 }
@@ -85,8 +83,7 @@ div.md-list-item-text {
 }
 
 md-list-item.md-2-line>.md-no-style {
- min-height: 10px; 
-  
+  min-height: 10px;
 }
 
 md-list-item .md-list-item-inner {
@@ -102,7 +99,7 @@ md-list-item.md-2-line {
   min-height: 10px;
 }
 
- .md-button {
+.md-button {
   margin: 10px 40%;
 }
 
@@ -112,18 +109,22 @@ md-list-item.md-2-line {
 }
 
 .login-icons {
-  font-size:30px !important;
+  font-size: 30px !important;
 }
 
 .layout-fill {
-    min-height: 88%;
+  min-height: 88%;
 }
 
-md-input-container label{
+md-input-container label {
   font-size: 14px;
   color: grey
 }
 
-.md-button.md-primary span{
-    color: White
+md-input-container {
+  margin: 0px;
+}
+
+.md-button.md-primary span {
+  color: White
 }
