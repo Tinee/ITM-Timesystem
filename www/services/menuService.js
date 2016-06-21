@@ -8,6 +8,7 @@
     MenuService.$inject = ['dataService'];
     function MenuService(dataService) {
 
+
         var internMenus = [
             {
                 link: '',
@@ -58,20 +59,13 @@
             }
         ];
 
-        getUsersBookmarks();
-
-        function getUsersBookmarks() {
-
-
-          dataService.bookmarks().query(function (response) {
-                var x = response;
-            });
-        }
+        var bookmarksMenu  = dataService.bookmarks().query();
 
         return {
             internMenus: internMenus,
             customerMenus: customerMenus,
-            mangementMenus: mangementMenus
+            mangementMenus: mangementMenus,
+            bookmarksMenu: bookmarksMenu
         }
     }
 })();
