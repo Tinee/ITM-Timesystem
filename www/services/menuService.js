@@ -35,9 +35,15 @@
         var customerMenus = [
             {
                 link: '/Tidsstämpling',
-                title: 'Kundrad',
+                title: 'Tidsrapportering',
                 icon: 'grade',
                 color: 'gold',
+            },
+            {
+                link: '/Bokmärken',
+                title: 'Bokmärken',
+                icon: 'bookmark_border',
+                color: 'red'
             },
             {
                 link: '/Historik',
@@ -49,7 +55,7 @@
 
         var mangementMenus = [
             {
-                link: '',
+                link: '/Profil',
                 title: 'Profil',
                 icon: 'face',
             },
