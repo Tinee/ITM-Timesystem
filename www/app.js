@@ -10,7 +10,9 @@
         'app.login',
         'app.auth',
         'app.directives',
-        'app.history'
+        'app.history',
+        'app.bookmarks',
+        'app.profile'
     ])
         .config([
             '$stateProvider',
@@ -57,7 +59,19 @@
                 templateUrl: '/www/history/history.html',
                 controller: 'HistoryController as vm',
                 resolve: isLoggedIn
-            });
+            })
+            .state('layout.bookmark', {
+                url: 'Bokmärken',
+                templateUrl: '/www/bookmarks/bookmarks.html',
+                controller: 'BookmarksController as vm',
+                resolve: isLoggedIn
+            })
+            .state('layout.profile', {
+                url: 'Profil',
+                templateUrl: '/www/profile/profile.html',
+                controller: 'ProfileController as vm',
+                resolve: isLoggedIn
+            });;
 
 
         $locationProvider.html5Mode(true);
