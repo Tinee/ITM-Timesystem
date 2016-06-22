@@ -14,15 +14,7 @@
             </div>
         </md-list-item>
         <md-divider></md-divider>
-        <md-subheader class="md-no-sticky">Bokmärken</md-subheader>
-        <md-list-item ng-click="vm.changeView(item.link)" class="md-2-line" ng-repeat="item in vm.menuItems.bookmarksMenu"  role="link" md-ink-ripple>
-            <md-icon aria-label="{{item.bookmarkTitle}}"><i class="material-icons">{{item.icon}}</i></md-icon>
-            <div class="md-list-item-text">
-                <span class="md-body-2">{{item.bookmarkTitle}}</span>
-        </div>
-        </md-list-item>
-        <md-divider></md-divider>
-        <md-subheader class="md-no-sticky">Favoriter</md-subheader>
+        <md-subheader class="md-no-sticky">Statiska Bokmärken</md-subheader>
         <md-list-item ng-click="vm.changeView(item.link)" class="md-2-line" ng-repeat="item in vm.menuItems.internMenus" role="link" md-ink-ripple>
             <md-icon aria-label="{{item.title}}"><i class="material-icons">{{item.icon}}</i></md-icon>
             <div class="md-list-item-text">
