@@ -8,12 +8,5 @@
     HistoryController.$inject = [];
     function HistoryController() {
         var vm = this;
-        
-
-        activate();
-
-        ////////////////
-
-        function activate() { }
     }
 })();
