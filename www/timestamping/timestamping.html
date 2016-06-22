@@ -1,130 +1,105 @@
-<div layout="row" layout-sm="column" layout-xs="column">
-  <md-card flex>
-    <div layout="row" layout-align="start center">
-      <img class="logo" src="\www\assets\files\itmlogo.png" alt="">
-    </div>
-    <md-divider></md-divider>
-    <md-icon><i style="font-size: 30px; float:left;" class="material-icons">bookmark_border</i></md-icon>
-    <md-card-content flex>
-      <div layout="inline">
-        <md-autocomplete flex required md-input-name="autocompleteField" md-input-minlength="2" md-input-maxlength="18" md-no-cache="ctrl.noCache" md-selected-item="ctrl.selectedItem" md-search-text="ctrl.searchText" md-items="item in ctrl.querySearch(ctrl.searchText)"
-          md-item-text="item.display" md-floating-label="Syssla">
-          <md-item-template>
-            <span md-highlight-text="ctrl.searchText">{{item.display}}</span>
-          </md-item-template>
-          <div ng-messages="searchForm.autocompleteField.$error" ng-if="searchForm.autocompleteField.$touched">
-            <div ng-message="required">You <b>must</b> have a favorite state.</div>
-            <div ng-message="minlength">Your entry is not long enough.</div>
-            <div ng-message="maxlength">Your entry is too long.</div>
-          </div>
-        </md-autocomplete>
-        <div flex=10></div>
-        <md-autocomplete flex required md-input-name="autocompleteField" md-input-minlength="2" md-input-maxlength="18" md-no-cache="ctrl.noCache" md-selected-item="ctrl.selectedItem" md-search-text="ctrl.searchText" md-items="item in ctrl.querySearch(ctrl.searchText)"
-          md-item-text="item.display" md-floating-label="Aktivitet">
-          <md-item-template>
-            <span md-highlight-text="ctrl.searchText">{{item.display}}</span>
-          </md-item-template>
-          <div ng-messages="searchForm.autocompleteField.$error" ng-if="searchForm.autocompleteField.$touched">
-            <div ng-message="required">You <b>must</b> have a favorite state.</div>
-            <div ng-message="minlength">Your entry is not long enough.</div>
-            <div ng-message="maxlength">Your entry is too long.</div>
-          </div>
-        </md-autocomplete>
+<md-content>
+  <div layout="row" layout-sm="column" layout-xs="column">
+    <md-card flex>
+      <div layout="row" layout-align="start center">
+        <img class="logo" src="\www\assets\files\itmlogo.png" alt="">
       </div>
-      <div layout="inline">
-        <md-autocomplete flex required md-input-name="autocompleteField" md-input-minlength="2" md-input-maxlength="18" md-no-cache="ctrl.noCache" md-selected-item="ctrl.selectedItem" md-search-text="ctrl.searchText" md-items="item in ctrl.querySearch(ctrl.searchText)"
-          md-item-text="item.display" md-floating-label="Kund">
-          <md-item-template>
-            <span md-highlight-text="ctrl.searchText">{{item.display}}</span>
-          </md-item-template>
-          <div ng-messages="searchForm.autocompleteField.$error" ng-if="searchForm.autocompleteField.$touched">
-            <div ng-message="required">You <b>must</b> have a favorite state.</div>
-            <div ng-message="minlength">Your entry is not long enough.</div>
-            <div ng-message="maxlength">Your entry is too long.</div>
-          </div>
-        </md-autocomplete>
-        <div flex=10></div>
-        <md-autocomplete flex required md-input-name="autocompleteField" md-input-minlength="2" md-input-maxlength="18" md-no-cache="ctrl.noCache" md-selected-item="ctrl.selectedItem" md-search-text="ctrl.searchText" md-items="item in ctrl.querySearch(ctrl.searchText)"
-          md-item-text="item.display" md-floating-label="Avtal">
-          <md-item-template>
-            <span md-highlight-text="ctrl.searchText">{{item.display}}</span>
-          </md-item-template>
-          <div ng-messages="searchForm.autocompleteField.$error" ng-if="searchForm.autocompleteField.$touched">
-            <div ng-message="required">You <b>must</b> have a favorite state.</div>
-            <div ng-message="minlength">Your entry is not long enough.</div>
-            <div ng-message="maxlength">Your entry is too long.</div>
-          </div>
-        </md-autocomplete>
-      </div>
-      <div layout="inline">
-        <md-autocomplete flex required md-input-name="autocompleteField" md-input-minlength="2" md-input-maxlength="18" md-no-cache="ctrl.noCache" md-selected-item="ctrl.selectedItem" md-search-text="ctrl.searchText" md-items="item in ctrl.querySearch(ctrl.searchText)"
-          md-item-text="item.display" md-floating-label="Taxa">
-          <md-item-template>
-            <span md-highlight-text="ctrl.searchText">{{item.display}}</span>
-          </md-item-template>
-          <div ng-messages="searchForm.autocompleteField.$error" ng-if="searchForm.autocompleteField.$touched">
-            <div ng-message="required">You <b>must</b> have a favorite state.</div>
-            <div ng-message="minlength">Your entry is not long enough.</div>
-            <div ng-message="maxlength">Your entry is too long.</div>
-          </div>
-        </md-autocomplete>
-        <div flex=10></div>
-        <md-autocomplete flex required md-input-name="autocompleteField" md-input-minlength="2" md-input-maxlength="18" md-no-cache="ctrl.noCache" md-selected-item="ctrl.selectedItem" md-search-text="ctrl.searchText" md-items="item in ctrl.querySearch(ctrl.searchText)"
-          md-item-text="item.display" md-floating-label="Tjänst">
-          <md-item-template>
-            <span md-highlight-text="ctrl.searchText">{{item.display}}</span>
-          </md-item-template>
-          <div ng-messages="searchForm.autocompleteField.$error" ng-if="searchForm.autocompleteField.$touched">
-            <div ng-message="required">You <b>must</b> have a favorite state.</div>
-            <div ng-message="minlength">Your entry is not long enough.</div>
-            <div ng-message="maxlength">Your entry is too long.</div>
-          </div>
-        </md-autocomplete>
-      </div>
-      <md-autocomplete flex required md-input-name="autocompleteField" md-input-minlength="2" md-input-maxlength="18" md-no-cache="ctrl.noCache" md-selected-item="ctrl.selectedItem" md-search-text="ctrl.searchText" md-items="item in ctrl.querySearch(ctrl.searchText)"
-        md-item-text="item.display" md-floating-label="Projekt">
-        <md-item-template>
-          <span md-highlight-text="ctrl.searchText">{{item.display}}</span>
-        </md-item-template>
-        <div ng-messages="searchForm.autocompleteField.$error" ng-if="searchForm.autocompleteField.$touched">
-          <div ng-message="required">You <b>must</b> have a favorite state.</div>
-          <div ng-message="minlength">Your entry is not long enough.</div>
-          <div ng-message="maxlength">Your entry is too long.</div>
+      <md-divider></md-divider>
+      <md-card-content flex>
+        <div layout="inline">
+          <md-autocomplete flex required md-input-name="autocompleteField" md-input-minlength="2" md-input-maxlength="18" md-no-cache="ctrl.noCache" md-selected-item="ctrl.selectedItem" md-search-text="ctrl.searchText" md-items="item in ctrl.querySearch(ctrl.searchText)"
+            md-item-text="item.display" md-floating-label="Syssla">
+          </md-autocomplete>
+          <div flex=10></div>
+          <md-autocomplete flex required md-input-name="autocompleteField" md-input-minlength="2" md-input-maxlength="18" md-no-cache="ctrl.noCache" md-selected-item="ctrl.selectedItem" md-search-text="ctrl.searchText" md-items="item in ctrl.querySearch(ctrl.searchText)"
+            md-item-text="item.display" md-floating-label="Aktivitet">
+          </md-autocomplete>
         </div>
-      </md-autocomplete>
-    </md-card-content>
-  </md-card>
-  <md-card flex>
-    <md-divider style="margin-top:11.5%"></md-divider>
-    <md-card-content flex>
-      <div layout="inline">
-        <mdp-time-picker flex=20 placeholder="Från" ng-model="asdasd"></mdp-time-picker>
-        <mdp-time-picker flex placeholder="Till" ng-model="asd"></mdp-time-picker>
-        <md-input-container>
-          <label>Datum</label>
-          <input ng-disabled="true" ng-model="vm.readableDate">
+        <div layout="inline">
+          <md-autocomplete flex required md-input-name="autocompleteField" md-input-minlength="2" md-input-maxlength="18" md-no-cache="ctrl.noCache" md-selected-item="ctrl.selectedItem" md-search-text="ctrl.searchText" md-items="item in ctrl.querySearch(ctrl.searchText)"
+            md-item-text="item.display" md-floating-label="Kund">
+          </md-autocomplete>
+          <div flex=10></div>
+          <md-autocomplete flex required md-input-name="autocompleteField" md-input-minlength="2" md-input-maxlength="18" md-no-cache="ctrl.noCache" md-selected-item="ctrl.selectedItem" md-search-text="ctrl.searchText" md-items="item in ctrl.querySearch(ctrl.searchText)"
+            md-item-text="item.display" md-floating-label="Avtal">
+          </md-autocomplete>
+        </div>
+        <div layout="inline">
+          <md-autocomplete flex required md-input-name="autocompleteField" md-input-minlength="2" md-input-maxlength="18" md-no-cache="ctrl.noCache" md-selected-item="ctrl.selectedItem" md-search-text="ctrl.searchText" md-items="item in ctrl.querySearch(ctrl.searchText)"
+            md-item-text="item.display" md-floating-label="Taxa">
+          </md-autocomplete>
+          <div flex=10></div>
+          <md-autocomplete flex required md-input-name="autocompleteField" md-input-minlength="2" md-input-maxlength="18" md-no-cache="ctrl.noCache" md-selected-item="ctrl.selectedItem" md-search-text="ctrl.searchText" md-items="item in ctrl.querySearch(ctrl.searchText)"
+            md-item-text="item.display" md-floating-label="Tjänst">
+            <md-item-template>
+              <span md-highlight-text="ctrl.searchText">{{item.display}}</span>
+            </md-item-template>
+        </div>
+        <md-autocomplete flex required md-input-name="autocompleteField" md-input-minlength="2" md-input-maxlength="18" md-no-cache="ctrl.noCache" md-selected-item="ctrl.selectedItem" md-search-text="ctrl.searchText" md-items="item in ctrl.querySearch(ctrl.searchText)"
+          md-item-text="item.display" md-floating-label="Projekt">
+        </md-autocomplete>
+        <md-icon ng-click="vm.showConfirm($event)"><i style="font-size: 30px; float:left;" class="material-icons">bookmark_border</i></md-icon>
+      </md-card-content>
+    </md-card>
+    <md-card flex>
+      <md-divider style="margin-top:11.5%"></md-divider>
+      <md-card-content flex>
+        <div layout="inline">
+          <mdp-time-picker flex=20 placeholder="Från" ng-model="asdasd"></mdp-time-picker>
+          <mdp-time-picker flex placeholder="Till" ng-model="asd"></mdp-time-picker>
+          <md-input-container>
+            <label>Datum</label>
+            <input ng-disabled="true" ng-model="vm.readableDate">
+          </md-input-container>
+        </div>
+        <md-input-container class="md-block">
+          <label>Beskrvning</label>
+          <textarea maxlength="80" ng-model="user.asdasdasd"></textarea>
         </md-input-container>
-      </div>
-      <md-input-container class="md-block">
-        <label>Beskrvning</label>
-        <textarea maxlength="80" ng-model="user.asdasdasd"></textarea>
-      </md-input-container>
-      <md-input-container class="md-block">
-        <label>Intern beskrivning</label>
-        <textarea ng-model="asdasdasd"></textarea>
-      </md-input-container>
-      <md-input-container class="md-block">
-        <label>Memo</label>
-        <textarea ng-model="asdasdasd"></textarea>
-      </md-input-container>
-      <md-input-container>
-    </md-card-content>
-    <md-button class="md-raised md-primary">Spara</md-button>
-  </md-card>
-  <md-card flex>
-    <md-divider style="margin-top:11.5%"></md-divider>
-    <md-card-content>
-      <calendar-md flex layout layout-fill calendar-direction="direction" on-day-click="vm.dayClick" title-format="'MMMM y'" ng-model='vm.selectedDate' week-starts-on="firstDayOfWeek" day-content="vm.setDayContent" disable-future-selection="false"></calendar-md>
-    </md-card-content>
-  </md-card>
-</div>
+        <md-input-container class="md-block">
+          <label>Intern beskrivning</label>
+          <textarea ng-model="asdasdasd"></textarea>
+        </md-input-container>
+        <md-input-container class="md-block">
+          <label>Memo</label>
+          <textarea ng-model="asdasdasd"></textarea>
+        </md-input-container>
+        <md-input-container>
+      </md-card-content>
+      <md-button class="md-raised md-primary">Spara</md-button>
+    </md-card>
+    <md-card flex>
+      <md-divider style="margin-top:11.5%"></md-divider>
+      <md-card-content>
+        <calendar-md flex layout layout-fill calendar-direction="direction" on-day-click="vm.dayClick" title-format="'MMMM y'" ng-model='vm.selectedDate' week-starts-on="firstDayOfWeek" day-content="vm.setDayContent" disable-future-selection="false"></calendar-md>
+      </md-card-content>
+    </md-card>
+  </div>
+  <div layout="row" layout-sm="column" layout-xs="column">
+    <md-card style="height: 100%"  flex>
+      <md-subheader class="md-no-sticky">Dagens</md-subheader>
+      <md-card-content>
+      </md-card-content>
+    </md-card>
+    <md-card flex>
+      <md-subheader class="md-no-sticky">Toggl</md-subheader>
+      <md-card-content>
+      </md-card-content>
+    </md-card>
+    <md-card  flex>
+      <md-card-content>
+        <md-autocomplete  md-search-text="vm.searchText" required md-selected-item="ctrl.selectedItem" md-items="item in ctrl.querySearch(ctrl.searchText)" md-item-text="item.display" md-floating-label="Sök" >
+        </md-autocomplete>
+        <md-subheader class="md-no-sticky">Bokmärken</md-subheader>
+        <md-list-item ng-click="vm.changeView(item.link)" ng-repeat="item in vm.bookmarks | filter:{bookmarkTitle: vm.searchText}" class="md-2-line" role="link" md-ink-ripple>
+          <md-icon aria-label="{{item.title}}"><i class="material-icons">{{item.icon}}</i></md-icon>
+          <div class="md-list-item-text">
+            <span class="md-body-2">{{item.bookmarkTitle}}</span>
+          </div>
+          <md-divider></md-divider>
+        </md-list-item>
+      </md-card-content>
+    </md-card>
+  </div>
+
+</md-content>
