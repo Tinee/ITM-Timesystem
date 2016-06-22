@@ -11,7 +11,8 @@ var bookmarkSchema = mongoose.Schema({
     service: { id: String, text: String },
     project: { id: String, text: String },
     created: { type: Date, default: Date.now },
-    icon: String
+    icon: String,
+    color: String
 },
     {
         versionKey: false
