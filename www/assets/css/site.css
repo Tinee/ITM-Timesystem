@@ -129,9 +129,8 @@ md-input-container {
   margin: 0px;
 }
 
-.md-button.md-primary span {
-  color: White
-}
+/*.md-button.md-primary span {
+}*/
 
 md-list-item.md-2-line .md-list-item-text {
     padding-top: 30px;
@@ -142,3 +141,5 @@ md-list-item.md-2-line .md-list-item-text {
 md-autocomplete[md-floating-label] md-input-container {
     padding-bottom: 0px;
 }
+
+
