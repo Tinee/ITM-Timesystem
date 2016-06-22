@@ -9,13 +9,16 @@
         'app.factories',
         'app.login',
         'app.auth',
-        'app.directives'
+        'app.directives',
+        'app.history'
     ])
-        .config(['$stateProvider',
+        .config([
+            '$stateProvider',
             '$locationProvider',
             '$urlRouterProvider',
             Routes])
-        .run(['$rootScope',
+        .run([
+            '$rootScope',
             '$state',
             Run]);
 
