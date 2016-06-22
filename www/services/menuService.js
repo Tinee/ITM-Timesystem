@@ -43,6 +43,7 @@
                 link: '/Historik',
                 title: 'Historik',
                 icon: 'public',
+                color: '#33CCFF'
             },
         ]
 
@@ -59,13 +60,10 @@
             }
         ];
 
-        var bookmarksMenu  = dataService.bookmarks().query();
-
         return {
             internMenus: internMenus,
             customerMenus: customerMenus,
             mangementMenus: mangementMenus,
-            bookmarksMenu: bookmarksMenu
         }
     }
 })();
