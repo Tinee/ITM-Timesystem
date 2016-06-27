@@ -1,0 +1,132 @@
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+[ng-click]:hover {
+  cursor: pointer;
+}
+
+body {
+  background: radial-gradient(hsl(30, 80%, 80%), hsl(210, 50%, 70%)) no-repeat center;
+}
+
+[ng-click]:hover {
+  cursor: pointer;
+}
+
+md-content {
+  background-color: inherit;
+  &.md-default-theme {
+    background-color: #eee;
+  }
+}
+
+md-sidenav {
+  > md-toolbar {
+    padding: 15px;
+    height: 150px;
+    max-height: 150px;
+  }
+  md-list-item.md-2-line .md-list-item-text {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  md-divider {
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+  md-icon {
+    fill: #737373;
+    position: relative;
+  }
+  .md-avatar {
+    height: 64px;
+    width: 64px;
+  }
+}
+
+div.md-list-item-text {
+  padding-bottom: 30px;
+}
+
+.md-avatar > svg {
+  border-radius: 50%;
+}
+
+.animate-show {
+  transition: 0.75s ease-out opacity;
+  opacity: 1;
+  &.ng-hide {
+    height: 0;
+    min-height: 0;
+    opacity: 0;
+    overflow: hidden;
+  }
+}
+
+.logo {
+  height: 55px;
+  text-align: center;
+  text-align: center;
+  width: 55px;
+  margin: 0 auto;
+  margin-bottom: 1%;
+}
+
+.itmTitle {
+  padding-top: 100px;
+}
+
+md-list-item {
+  &.md-2-line > .md-no-style {
+    min-height: 10px;
+  }
+  .md-list-item-inner {
+    height: 10px;
+  }
+  &.md-2-line {
+    .md-list-item-text, > .md-no-style .md-list-item-text {
+      margin: 0px;
+    }
+    min-height: 10px;
+  }
+}
+
+.md-button {
+  margin: 10px 40%;
+}
+
+#loginButton {
+  margin: 10px 80%;
+  margin-left: 80%;
+}
+
+.login-icons {
+  font-size: 30px !important;
+}
+
+.layout-fill {
+  min-height: 88%;
+}
+
+md-input-container {
+  label {
+    font-size: 14px;
+    color: grey;
+  }
+  margin: 0px;
+}
+
+md-list-item.md-2-line .md-list-item-text {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+md-autocomplete {
+  &[md-floating-label] md-input-container {
+    padding-bottom: 0px;
+  }
+  md-autocomplete-wrap md-progress-linear.md-inline {
+    bottom: 20px;
+  }
+}
