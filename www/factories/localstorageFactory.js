@@ -9,7 +9,8 @@
     function LocalstorageFactory() {
         var services = {
             get: get,
-            remove: remove
+            remove: remove,
+            set:set
         };
 
         return services;
@@ -20,6 +21,10 @@
 
         function remove(key) {
             return window.localStorage.removeItem(key);
+        }
+
+        function set(key,data) {
+            return window.localStorage.setItem(key,angular.toJson(data));
         }
     }
 })();
