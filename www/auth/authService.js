@@ -9,7 +9,7 @@
     function AuthService($location, $http, $q, $state, localstorageFactory) {
 
 
-        var serviceBase = '';
+        var serviceBase = 'http://aspnetsite.local/';
         var services = {
             login: login,
             logout: logout,
@@ -20,21 +20,22 @@
 
         function login(loginData) {
 
-            var data = "grant_type=password&username=" + loginData.userName + "&password=" + loginData.password;
+            var data = "grant_type=password&username=" + loginData.username + "&password=" + loginData.password;
+            var headers = { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } };
 
             var deferred = $q.defer();
 
-            $http.post(serviceBase + 'token', data, { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }).success(function (response) {
+            $http.post(serviceBase + 'token', data, headers)
+                .success(function (response) {
 
-                window.localStorage.setItem('token', angular.toJson({ token: response.access_token }));
+                    localstorageFactory.set('user', response)
 
-                $location.path('/Inlogg');
+                    deferred.resolve(response);
 
-                deferred.resolve(response);
-
-            }).error(function (err, status) {
-                deferred.reject(err);
-            });
+                }).error(function (err, status) {
+                    deferred.reject(err);
+                });
+                
             return deferred.promise;
         }
 
