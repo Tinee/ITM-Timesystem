@@ -129,8 +129,6 @@ md-input-container {
   margin: 0px;
 }
 
-/*.md-button.md-primary span {
-}*/
 
 md-list-item.md-2-line .md-list-item-text {
     padding-top: 30px;
@@ -142,4 +140,10 @@ md-autocomplete[md-floating-label] md-input-container {
     padding-bottom: 0px;
 }
 
+md-autocomplete md-autocomplete-wrap md-progress-linear.md-inline {
+    bottom: 20px;
+    right: 2px;
+    left: 2px;
+    width: auto;
+}
 
