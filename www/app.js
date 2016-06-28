@@ -71,7 +71,7 @@
                 templateUrl: '/www/profile/profile.html',
                 controller: 'ProfileController as vm',
                 resolve: isLoggedIn
-            });;
+            });
 
 
         $locationProvider.html5Mode(true);
