@@ -29,6 +29,12 @@
                 <span class="md-body-2">{{item.title}}</span>
             </div>
         </md-list-item>
+            <md-list-item ng-click="vm.logout()" class="md-2-line"  role="link" md-ink-ripple>
+            <md-icon aria-label="Logout"><i class="material-icons">vertical_align_bottom</i></md-icon>
+            <div class="md-list-item-text">
+                <span class="md-body-2">Logout</span>
+            </div>
+        </md-list-item>
     </md-list>
 </md-sidenav>
 <div layout="column" class="relative" layout-fill role="main">
