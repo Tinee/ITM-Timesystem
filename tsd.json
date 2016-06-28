@@ -6,7 +6,7 @@
   "bundle": "typings/tsd.d.ts",
   "installed": {
     "node/node.d.ts": {
-      "commit": "e325b363f5ee9c72ebde49f1e783ae725f64b7e2"
+      "commit": "2743ece76d3b31df635afdc39c63ed13acf393ad"
     },
     "serve-static/serve-static.d.ts": {
       "commit": "e325b363f5ee9c72ebde49f1e783ae725f64b7e2"
@@ -31,6 +31,9 @@
     },
     "lodash/lodash.d.ts": {
       "commit": "e325b363f5ee9c72ebde49f1e783ae725f64b7e2"
+    },
+    "gulp-sass/gulp-sass.d.ts": {
+      "commit": "2743ece76d3b31df635afdc39c63ed13acf393ad"
     }
   }
 }
