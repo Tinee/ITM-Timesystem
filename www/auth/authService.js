@@ -5,8 +5,8 @@
         .module('app.auth')
         .factory('authService', AuthService);
 
-    AuthService.$inject = ['$location', '$http', '$q', '$state','localstorageFactory'];
-    function AuthService($location, $http, $q, $state,localstorageFactory) {
+    AuthService.$inject = ['$location', '$http', '$q', '$state', 'localstorageFactory'];
+    function AuthService($location, $http, $q, $state, localstorageFactory) {
 
 
         var serviceBase = 'http://aspnetsite.local/';
@@ -34,7 +34,7 @@
                 }).error(function (err, status) {
                     deferred.reject(err.error);
                 });
-                
+
             return deferred.promise;
         }
 
@@ -48,7 +48,13 @@
         }
 
         function logout() {
+            var deferred = $q.defer();
+
             localstorageFactory.remove('user');
+            $state.go('layout.login');
+            deferred.resolve();
+
+            return deferred.promise;
         }
     }
 })();
