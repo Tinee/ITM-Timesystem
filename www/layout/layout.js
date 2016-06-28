@@ -12,10 +12,14 @@
     vm.toggleSidenav = toogleSidenav
     vm.menuItems = menuService;
     vm.changeView = changeView.goToo;
-    vm.logout = authService.logout;
-
+    vm.logout = logout
     vm.isLoggedIn = authService.checkLoggedInStatus()
 
+    function logout(){
+      authService.logout().then(function () {
+        vm.isLoggedIn = false;
+      });
+    }
 
     function toogleSidenav(menuId) {
       $mdSidenav(menuId).toggle();
