@@ -14,6 +14,8 @@
             password: ""
         }
 
+        particlesJS.load('particles-js', '../particles.json');
+        
         vm.login = login;
 
         function login(loginData) {
