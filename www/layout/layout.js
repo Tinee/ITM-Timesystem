@@ -13,11 +13,11 @@
     vm.menuItems = menuService;
     vm.changeView = changeView.goToo;
     vm.logout = logout
-    vm.isLoggedIn = authService.checkLoggedInStatus()
+    $scope.isLoggedIn = authService.checkLoggedInStatus()
 
     function logout(){
       authService.logout().then(function () {
-        vm.isLoggedIn = false;
+        $scope.isLoggedIn = false;
       });
     }
 
