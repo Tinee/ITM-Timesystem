@@ -1,3 +1,5 @@
+
+
 (function () {
     'use strict';
 
@@ -5,24 +7,35 @@
         .module('app.timestamping')
         .controller('TimestampingController', TimestampingController);
 
-    TimestampingController.$inject = ['$scope', '$filter', '$mdpTimePicker', '$mdDialog', 'dataService', '$q', '$timeout'];
-    function TimestampingController($scope, $filter, $mdpTimePicker, $mdDialog, dataService, $q, $timeout) {
+    TimestampingController.$inject = ['$scope', '$filter', '$mdpTimePicker', '$mdDialog', 'dataService','autoCompleteValues',];
+    function TimestampingController($scope, $filter, $mdpTimePicker, $mdDialog, dataService,autoCompleteValues) {
 
         var vm = this;
 
         vm.bookmarks = dataService.bookmarks().query();
+        vm.autoCompleteValues = dataService.autoCompleteValues().get();
+        
         vm.readableDate;
         vm.selectedDate;
         vm.searchText = "";
+        vm.bookmark = false;
+        
+        vm.saveBookmarkProperties = {
+            color: '',
+            name: '',
+            icon: ''
+        }
 
-        vm.selectedItem = null;
-        vm.searchText = null;
+        vm.selectedItem = null
+        vm.searchTexts = {
+            bookmark: '',
+            customer: '',
+        }
 
-        vm.showConfirm = showConfirm;
-        vm.querySearch = querySearch;
+        vm.customerSearch = autoCompleteValues.customerSearch;
+        vm.bookmarkSearch = autoCompleteValues.bookmarkSearch;
         vm.dayClick = dayClick;
         vm.setDayContent = setDayContent;
-        
 
         function dayClick(date) {
 
@@ -35,32 +48,7 @@
             return "<p></p>";
         };
 
-        function querySearch(query) {
-            var results = query ? vm.bookmarks.filter(createFilterFor(query)) : vm.bookmarks;
-            var deferred = $q.defer();
-            $timeout(function () { deferred.resolve(results); }, Math.random() * 1000, false);
-            return deferred.promise;
-        }
 
-        function createFilterFor(query) {
-            return function filterFn(state) {
-                var p = state.bookmarkTitle.indexOf(query)
-                return (p === 0);
-            };
-        }
-
-        function showConfirm(ev) {
-            var confirm = $mdDialog.confirm()
-                .title('Spara bokmärke')
-                .textContent('Fyll i uppgifterna nedan.')
-                .targetEvent(ev)
-                .ok('Spara')
-                .cancel('Avbryt');
-            $mdDialog.show(confirm).then(function () {
-                $scope.status = 'You decided to get rid of your debt.';
-            }, function () {
-                $scope.status = 'You decided to keep your debt.';
-            });
-        };
     }
 })();
+
