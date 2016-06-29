@@ -8,18 +8,23 @@
     dataService.$inject = ['$resource'];
     function dataService($resource) {
 
-        var baseAdress = 'http://localhost:50944/';
+        var baseAdress = 'http://aspnetsite.local/api/';
         var mongoDbAdress = 'http://127.0.0.1:3000/';
 
 
         var services = {
-            bookmarks: bookmarks
+            bookmarks: bookmarks,
+            autoCompleteValues : autoCompleteValues
         };
 
         return services;
 
         function bookmarks() {
             return $resource(mongoDbAdress + 'bookmarks/:id', { id: '@id' });
+        }
+
+        function autoCompleteValues() {
+            return $resource(baseAdress + 'TimestampAutoComplete');
         }
     }
 })();
