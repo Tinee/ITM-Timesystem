@@ -9,7 +9,7 @@
     //Themeconfig to change colors on the client.
     $mdThemingProvider.theme('default')
       .primaryPalette('blue-grey')
-      .accentPalette('amber')
+      .accentPalette('green')
       .warnPalette('red')
       .backgroundPalette('grey');
 
