@@ -14,7 +14,7 @@
 
         vm.bookmarks = dataService.bookmarks().query();
         vm.autoCompleteValues = dataService.autoCompleteValues().get();
-        
+
         vm.readableDate;
         vm.selectedDate;
         vm.searchText = "";
@@ -30,10 +30,19 @@
         vm.searchTexts = {
             bookmark: '',
             customer: '',
+            occupation: '',
+            acctivity: '',
+            taxes: '',
+            project: '',
         }
 
         vm.customerSearch = autoCompleteValues.customerSearch;
         vm.bookmarkSearch = autoCompleteValues.bookmarkSearch;
+        vm.occupationSearch = autoCompleteValues.occupationSearch;
+        vm.acctivitySearch = autoCompleteValues.acctivitySearch;
+        vm.taxesSearch = autoCompleteValues.taxesSearch;
+        vm.projectsSearch = autoCompleteValues.projectsSearch;
+        
         vm.dayClick = dayClick;
         vm.setDayContent = setDayContent;
 
