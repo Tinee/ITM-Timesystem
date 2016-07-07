@@ -14,7 +14,10 @@
 
         var services = {
             bookmarks: bookmarks,
-            autoCompleteValues : autoCompleteValues
+            autoCompleteValues: autoCompleteValues,
+            agreementsCompleteValues: agreementsCompleteValues,
+            servicesCompleteValues:servicesCompleteValues,
+            timestamps : timestamps
         };
 
         return services;
@@ -23,8 +26,20 @@
             return $resource(mongoDbAdress + 'bookmarks/:id', { id: '@id' });
         }
 
+           function timestamps() {
+            return $resource(baseAdress + 'TimestampAutoComplete');
+        }
+
         function autoCompleteValues() {
             return $resource(baseAdress + 'TimestampAutoComplete');
+        }
+
+        function agreementsCompleteValues() {
+            return $resource(baseAdress + 'TimestampAutoComplete/Agreements/:customerId', { customerId: '@customerId' });
+        }
+
+        function servicesCompleteValues() {
+            return $resource(baseAdress + 'TimestampAutoComplete/:contractId', { contractId: '@contractId' });
         }
     }
 })();
