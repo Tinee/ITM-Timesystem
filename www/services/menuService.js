@@ -15,6 +15,11 @@
                 title: 'Vård av barn',
                 icon: 'child_care',
             },
+                {
+                link: '',
+                title: 'Flex',
+                icon: 'accessibility',
+            },
             {
                 link: '',
                 title: 'Semester',
@@ -39,6 +44,7 @@
                 icon: 'grade',
                 color: 'gold',
             },
+            
             {
                 link: '/Bokmärken',
                 title: 'Bokmärken',
