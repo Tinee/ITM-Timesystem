@@ -15,12 +15,15 @@
             occupationSearch: occupationSearch,
             acctivitySearch: acctivitySearch,
             taxesSearch: taxesSearch,
-            projectsSearch: projectsSearch
+            projectsSearch: projectsSearch,
+            servicesSearch: servicesSearch,
+            agreementsSearch:agreementsSearch
         };
 
         return services;
 
         function customerSearch(query, customers) {
+
 
             var results = query ? customers.filter(createFilterFor(query)) : customers
             var deferred = $q.defer();
@@ -112,6 +115,45 @@
         function projectsSearch(query, projects) {
 
             var results = query ? projects.filter(createFilterFor(query)) : projects
+            var deferred = $q.defer();
+            $timeout(function () { deferred.resolve(results); }, Math.random() * 1000, false);
+
+            return deferred.promise;
+
+            function createFilterFor(query) {
+                return function filterFn(state) {
+                    query = query.toLowerCase();
+                    var checkLowerProperty = state.name.toLowerCase();
+                    var p = checkLowerProperty.indexOf(query)
+                    return (p >= 0);
+                };
+            }
+        }
+
+        function servicesSearch(query, services) {
+
+            var results = query ? services.filter(createFilterFor(query)) : services
+            var deferred = $q.defer();
+            $timeout(function () { deferred.resolve(results); }, Math.random() * 1000, false);
+
+            return deferred.promise;
+
+            function createFilterFor(query) {
+                return function filterFn(state) {
+                    query = query.toLowerCase();
+                    if(state.used === true){
+                        state.icon = 'grade';
+                    }
+                    var checkLowerProperty = state.description.toLowerCase();
+                    var p = checkLowerProperty.indexOf(query)
+                    return (p >= 0);
+                };
+            }
+        }
+
+          function agreementsSearch(query, agreements) {
+
+            var results = query ? agreements.filter(createFilterFor(query)) : agreements
             var deferred = $q.defer();
             $timeout(function () { deferred.resolve(results); }, Math.random() * 1000, false);
 
