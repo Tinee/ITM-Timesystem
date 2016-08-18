@@ -25,13 +25,14 @@
             name: '',
             icon: ''
         }
-
+        
         vm.iconsAndColorsList = {
-            colors: ['red','blue','green', 'pink','grey','purple'],
-            icons: ['grade','accessibility','settings','touch_app','trending_up','visibility','view_week','work','train','refresh','power','casino','golf_course','school','sentiment_very_satisfied']
+            colors: ['red', 'blue', 'green', 'pink', 'grey', 'purple'],
+            icons: ['grade', 'accessibility', 'settings', 'touch_app', 'trending_up', 'visibility', 'view_week', 'work', 'train', 'refresh', 'power', 'casino', 'golf_course', 'school', 'sentiment_very_satisfied']
         }
 
         vm.timestamp = {
+            bookmarkTitle: {}
         };
 
         vm.searchTexts = {
@@ -45,12 +46,6 @@
             service: '',
             debit: '',
         }
-
-        vm.debitOptions = [
-            { value: true, description: 'Ja' },
-            { value: false, description: 'Nej' },
-            { description: 'Kanske' },
-        ]
 
         vm.customerSearch = autoCompleteValues.customerSearch;
         vm.bookmarkSearch = autoCompleteValues.bookmarkSearch;
@@ -67,19 +62,29 @@
         vm.services = [];
 
         vm.saveBookmark = saveBookmark;
+        vm.submitTimestamp = submitTimestamp;
         vm.dayClick = dayClick;
         vm.setDayContent = setDayContent;
 
         function dayClick(date) {
-
             if (date === undefined) return;
             vm.readableDate = $filter("date")(date, "MMMM d");
             vm.selectedDate = date;
+            vm.timestamp.dateFrom = date;
         };
 
         function setDayContent(date) {
             return "<p></p>";
         };
+
+        function submitTimestamp(timestamp) {
+
+            dataService.timestamps().save(vm.timestamp, function (res) {
+                var x = res;
+            }, function (err) {
+                alert(err);
+            });
+        }
 
         function getAgreements(customerId) {
             dataService.agreementsCompleteValues().query({ customerId: customerId }, function (res) {
