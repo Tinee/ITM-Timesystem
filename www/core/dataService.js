@@ -27,7 +27,7 @@
         }
 
            function timestamps() {
-            return $resource(baseAdress + 'TimestampAutoComplete');
+            return $resource(baseAdress + 'Timestamp');
         }
 
         function autoCompleteValues() {
