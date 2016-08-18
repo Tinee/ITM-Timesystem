@@ -11,7 +11,7 @@
                     <md-item-template>
                         <span class="item-title">
             <md-icon style="color:{{item.icon.color}}" aria-label="{{item.bookmarkTitle}}"><i class="material-icons">{{item.icon.name}}</i></md-icon>
-            <span> {{item.bookmarkTitle}} </span>
+            <span>{{item.bookmarkTitle}}</span>
                         </span>
                         <md-not-found>
                             Bokmärket finns inte.
@@ -72,7 +72,8 @@
                                 </md-autocomplete>
                 </div>
                 <div layout="inline ">
-                    <md-autocomplete flex md-input-name="autocompleteField " md-no-cache="false " md-input-minlength="0 " md-input-maxlength="100 " md-selected-item="vm.timestamp.customer" md-search-text="vm.searchTexts.customer " md-items="item in vm.customerSearch(vm.searchTexts.customer,vm.autoCompleteValues.customer) " md-item-text="item.name " md-selected-item-change="vm.getAgreements(item.customerId) " md-floating-label="Kund">
+                    <md-autocomplete flex md-input-name="autocompleteField " md-no-cache="false " md-input-minlength="0 " md-input-maxlength="100 " md-selected-item="vm.timestamp.customer" md-search-text="vm.searchTexts.customer " md-items="item in vm.customerSearch(vm.searchTexts.customer,vm.autoCompleteValues.customer) "
+                        md-item-text="item.name " md-selected-item-change="vm.getAgreements(item.customerId) " md-floating-label="Kund">
                         <span class="item-title ">
                               <span> {{item.name}} </span>
                         </span>
@@ -123,16 +124,6 @@
                             Projektet finns inte.
                         </md-not-found>
                     </md-autocomplete>
-                    <div flex=10></div>
-                    <md-autocomplete flex md-input-name="autocompleteField " md-min-length="0 " md-no-cache="false " md-input-maxlength="100 " md-selected-item="vm.timestamp.debit " md-search-text="vm.searchTexts.debit " md-items="item in vm.servicesSearch(vm.searchTexts.debit,vm.debitOptions) "
-                        md-item-text="item.description " md-floating-label="Debitera " md-autoselect>
-                        <span class="item-title ">
-                              <span> {{item.description}} </span>
-                        </span>
-                        <md-not-found>
-                            Projektet finns inte.
-                        </md-not-found>
-                    </md-autocomplete>
                 </div>
             </md-card-content>
             <md-button ng-show="vm.bookmark " ng-click="vm.saveBookmark() " class="md-raised md-primary ">Bokmärk</md-button>
@@ -141,28 +132,28 @@
             <md-divider style="margin-top:11.5% "></md-divider>
             <md-card-content flex>
                 <div layout="inline ">
-                    <mdp-time-picker flex=20 placeholder="Från " ng-model="asdasd "></mdp-time-picker>
-                    <mdp-time-picker flex placeholder="Till " ng-model="asd "></mdp-time-picker>
+                    <mdp-time-picker flex=20 placeholder="Från " ng-model="vm.timestamp.clockFrom"></mdp-time-picker>
+                    <mdp-time-picker flex placeholder="Till " ng-model="vm.timestamp.clockTo"></mdp-time-picker>
                     <md-input-container>
                         <label>Datum</label>
-                        <input required ng-disabled="true " ng-model="vm.readableDate ">
+                        <input required ng-disabled="true " ng-model="vm.readableDate">
                     </md-input-container>
                 </div>
                 <md-input-container class="md-block ">
                     <label>Beskrvning</label>
-                    <textarea maxlength="80 " ng-model="user.asdasdasd "></textarea>
+                    <textarea maxlength="80 " ng-model="vm.timestamp.description"></textarea>
                 </md-input-container>
                 <md-input-container class="md-block ">
                     <label>Intern beskrivning</label>
-                    <textarea ng-model="asdasdasd "></textarea>
+                    <textarea ng-model="vm.timestamp.internDescription"></textarea>
                 </md-input-container>
                 <md-input-container class="md-block ">
                     <label>Memo</label>
-                    <textarea ng-model="x "></textarea>
+                    <textarea ng-model="vm.timestamp.memo"></textarea>
                 </md-input-container>
                 <md-input-container>
             </md-card-content>
-            <md-button ng-click="submit() " class="md-raised md-primary ">Spara</md-button>
+            <md-button ng-click="vm.submitTimestamp() " class="md-raised md-primary ">Spara</md-button>
         </md-card>
         <md-card flex>
             <md-divider style="margin-top:11.5% "></md-divider>
