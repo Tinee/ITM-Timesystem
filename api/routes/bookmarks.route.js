@@ -3,7 +3,6 @@ var Bookmarks = require('../models/bookmarks.model.js');
 
 module.exports = function (app) {
 
-
     app.post('/bookmarks', function (req, res) {
         var newBookmarks = new Bookmarks(req.body);
 
