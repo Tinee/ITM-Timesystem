@@ -6,8 +6,6 @@ var mongoose = require('mongoose');
 
 mongoose.connect('mongodb://localhost/SecondaryMongoDb');
 
-
-
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: true

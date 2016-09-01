@@ -25,15 +25,13 @@
             name: '',
             icon: ''
         }
-        
+
         vm.iconsAndColorsList = {
             colors: ['red', 'blue', 'green', 'pink', 'grey', 'purple'],
             icons: ['grade', 'accessibility', 'settings', 'touch_app', 'trending_up', 'visibility', 'view_week', 'work', 'train', 'refresh', 'power', 'casino', 'golf_course', 'school', 'sentiment_very_satisfied']
         }
 
-        vm.timestamp = {
-            bookmarkTitle: {}
-        };
+        vm.timestamp = {};
 
         vm.searchTexts = {
             bookmark: '',
@@ -66,6 +64,12 @@
         vm.dayClick = dayClick;
         vm.setDayContent = setDayContent;
 
+        $scope.$on('scanner-started', function (event, args) {
+            
+            vm.timestamp = args;
+            console.log(args.agreement.id)
+        });
+
         function dayClick(date) {
             if (date === undefined) return;
             vm.readableDate = $filter("date")(date, "MMMM d");
@@ -79,8 +83,9 @@
 
         function submitTimestamp(timestamp) {
 
-            dataService.timestamps().save(vm.timestamp, function (res) {
-                var x = res;
+            dataService.timestamps()
+            .save(vm.timestamp, function (res) {
+
             }, function (err) {
                 alert(err);
             });
@@ -91,7 +96,7 @@
                 vm.agreements = res;
             });
         }
-
+                    //  Get service             
         function getServices(contractId) {
             dataService.servicesCompleteValues().query({ contractId: contractId }, function (res) {
                 vm.services = res;

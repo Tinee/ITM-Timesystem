@@ -11,13 +11,12 @@
         var baseAdress = 'http://aspnetsite.local/api/';
         var mongoDbAdress = 'http://127.0.0.1:3000/';
 
-
         var services = {
             bookmarks: bookmarks,
             autoCompleteValues: autoCompleteValues,
             agreementsCompleteValues: agreementsCompleteValues,
-            servicesCompleteValues:servicesCompleteValues,
-            timestamps : timestamps
+            servicesCompleteValues: servicesCompleteValues,
+            timestamps: timestamps
         };
 
         return services;
@@ -26,7 +25,7 @@
             return $resource(mongoDbAdress + 'bookmarks/:id', { id: '@id' });
         }
 
-           function timestamps() {
+        function timestamps() {
             return $resource(baseAdress + 'Timestamp');
         }
 

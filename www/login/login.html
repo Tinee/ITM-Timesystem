@@ -1,13 +1,15 @@
-<md-content flex id="particles-js">
+<md-content flex>
+    <div id="particles-js">
+    </div>
     <div style="margin-top:70px" layout="row" layout-sm="column" layout-xs="column" layout-padding>
         <div flex=30></div>
-        <md-card flex>
+        <md-card flex style="background-color: rgba(255,255,255,0.5);">
             <md-card-content flex>
                 <div layout="row" layout-align="start center">
                     <img class="logo" src="\www\assets\files\itmlogo.png" alt="">
                 </div>
                 <form>
-                    <md-input-container class="md-icon-float md-block">
+                    <md-input-container  class="md-icon-float md-block">
                         <label>Användarnamn</label>
                         <md-icon aria-label="mood"><i class="material-icons login-icons">mood</i></md-icon>
                         <input flex ng-model="vm.loginData.username" type="text">

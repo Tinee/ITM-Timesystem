@@ -47,7 +47,7 @@
                 </div>
                 <br ng-if="vm.bookmark">
                 <div layout="inline ">
-                    <md-autocomplete flex md-input-name="autocompleteField " md-no-cache="false " md-selected-item="vm.timestamp.occupation " md-search-text="vm.searchTexts.occupation " md-items="item in vm.occupationSearch(vm.searchTexts.occupation,vm.autoCompleteValues.occupations) "
+                    <md-autocomplete md-require-match required flex md-input-name="autocompleteField " md-no-cache="false " md-selected-item="vm.timestamp.occupation " md-search-text="vm.searchTexts.occupation " md-items="item in vm.occupationSearch(vm.searchTexts.occupation,vm.autoCompleteValues.occupations) "
                         md-item-text="item.text " md-min-length="0 " md-floating-label="Syssla ">
                         <md-item-template>
                             <span class="item-title ">
@@ -165,11 +165,6 @@
     <div layout="row " layout-sm="column " layout-xs="column ">
         <md-card style="height: 100% " flex>
             <md-subheader class="md-no-sticky ">Dagens</md-subheader>
-            <md-card-content>
-            </md-card-content>
-        </md-card>
-        <md-card flex>
-            <md-subheader class="md-no-sticky ">Toggl</md-subheader>
             <md-card-content>
             </md-card-content>
         </md-card>

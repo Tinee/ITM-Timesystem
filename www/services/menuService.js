@@ -8,14 +8,23 @@
     MenuService.$inject = ['dataService'];
     function MenuService(dataService) {
 
-
         var internMenus = [
             {
                 link: '',
                 title: 'Vård av barn',
                 icon: 'child_care',
+                staticValue: {
+                    occupation: {
+                        id: 1,
+                        text: 'FU'
+                    },
+                    agreement: {
+                        id: 13,
+                        name: 'Hejsan'
+                    }
+                }
             },
-                {
+            {
                 link: '',
                 title: 'Flex',
                 icon: 'accessibility',
@@ -44,7 +53,7 @@
                 icon: 'grade',
                 color: 'gold',
             },
-            
+
             {
                 link: '/Bokmärken',
                 title: 'Bokmärken',
